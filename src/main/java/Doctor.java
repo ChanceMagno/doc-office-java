@@ -57,7 +57,7 @@ public class Doctor {
     return false;
   } else {
     Doctor newDoctor = (Doctor) otherDoctor;
-    return this.getName().equals(newDoctor.getName());
+    return this.getName().equals(newDoctor.getName()) && this.getId()==newDoctor.getId();
     }
   }
 
