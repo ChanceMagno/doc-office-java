@@ -1,3 +1,35 @@
 <!--index.vtl-->
+<div class="jumbotron">
+  <h1> You are a doctor</h1>
+  <form action="/doctors" method="post">
+
+    <label for="name">Doctor name</label>
+    <input id="name" name="name" type="text">
+
+    <label for="specialty">Doctor specialty</label>
+    <input id="specialty" name="specialty" type="number">
+
+    <button type="submit" class="btn btn-success">Add Doctor</button>
+
+  </form>
+  <h1> You are sick and need a doctor</h1>
+
+  <form action="/patients" method="post">
+
+    <label for="name">Patient name</label>
+    <input id="name" name="name" type="text">
+
+    <label for="doctorId">Select Your Doctor</label>
+<select id='doctorId' name='doctorId' type='text'>
+    <option value="0">No Doctor Yet</option>
+  #foreach($doctor in $doctors)
+    <option value="$doctor.getId()">$doctor.getName() - Speciality: $doctor.getSpecialty_id()</option>
+  #end
+</select>
+
+    <button type="submit" class="btn btn-success">Add Patient</button>
+
+  </form>
+</div>
 
 <!--index.vtl-->

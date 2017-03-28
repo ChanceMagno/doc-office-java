@@ -18,6 +18,9 @@ public class Patient {
   public int getDoctor_id() {
     return doctor_id;
   }
+  public void setDoctorId(int doctorID){
+    doctor_id=doctorID;
+  }
 
   public int getId(){
     return id;

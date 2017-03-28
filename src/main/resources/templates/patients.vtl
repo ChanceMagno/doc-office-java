@@ -1,0 +1,8 @@
+<!--patients.vtl-->
+<div class="jumbotron">
+  #foreach ($patient in $patients)
+    <h2> $patient.getName() , Your Doctor is $doctors.find($patient.getDoctor_id()).getName()</h2>
+  #end
+</div>
+
+<!--doctors.vtl-->
